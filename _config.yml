@@ -1,18 +1,18 @@
 # Site settings
-title: "Your awesome title"
-description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+title: "Stefan's Blog"
+description: "This is my blog. It is about technical stuff. I like to try out lots of different things, so the topic of the posts might vary."
+url: "http://stefandollase.github.io" # the base hostname & protocol for your site
 baseurl: "" # the subpath of your site, e.g. /blog/
 
 # About the author
-author_fullname: "Page Owner"
-author_address: [ "My Street 123", "12345 My City" ]
-email: "your-email ät domain.com"
-github_username: "jekyll"
+author_fullname: "Stefan Dollase"
+author_address: [ "Harscampstraße 22", "52062 Aachen" ]
+email: "me ät stefandollase.de"
+github_username: "stefandollase"
 
 # Disqus settings
-#disqus_shortname: ""
-#disqus_identifier_prefix: ""
+disqus_shortname: "stefandollase"
+disqus_identifier_prefix: "blog:"
 
 # Build settings
 markdown: kramdown
