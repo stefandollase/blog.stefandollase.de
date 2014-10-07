@@ -1,16 +1,14 @@
-.tag-list .tag-tag1 {
-	background-color: #FF8A8A;
+.tag-list .tag-guide {
+	background-color: lighten(#f00, 30%);
 }
 
-.tag-list .tag-tag2 {
-	background-color: #AD8BFE;
+.tag-list .tag-linux {
+	background-color: lighten(#00f, 30%);
 }
 
-.tag-list .tag-tag3 {
-	background-color: #4BFE78;
+.tag-list .tag-ssh,
+.tag-list .tag-shell,
+.tag-list .tag-rsync,
+.tag-list .tag-nginx {
+	background-color: lighten(#0f0, 30%);
 }
-
-.tag-list .tag-tag4 {
-	background-color: #FFFF84;
-}
-
