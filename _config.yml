@@ -16,3 +16,12 @@ disqus_identifier_prefix: "blog:"
 
 # Build settings
 markdown: kramdown
+
+# Page Menu Entries
+menu_entries:
+  - url: "/about/"
+    title: "About1"
+  - url: "/about/"
+    title: "About2"
+  - url: "/about/"
+    title: "About3"
