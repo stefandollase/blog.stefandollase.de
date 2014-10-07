@@ -5,16 +5,14 @@ description: >
   Often enough I am annoyed when I want to send someone a file,
   so I decided to write a script which helps me to synchronize
   a folder on my local laptop to a folder, which is publicly available on the internet.
-tags: [ "guide", "rsync", "nginx", "shell", "ssh" ]
-hidden: true
+tags: [ guide, rsync, nginx, shell, ssh, linux ]
 ---
 ## Setting up ssh
 
-To be able to push files to the server, we need to somehow get access to it.
-In this guide, I will use a ssh connection, so we need to install and configure an ssh server on the webserver.
+To be able to push files to the server, we need access to it.
+In this guide, we will use an ssh connection, so first we install and configure an ssh server on the webserver.
 There are many guides for this out there, for example
-[this Ubuntu guide](https://help.ubuntu.com/community/SSH/OpenSSH/Configuring) and
-[this Mac OS X and Windows guide](http://lifehacker.com/205090/geek-to-live--set-up-a-personal-home-ssh-server).
+[this one](https://help.ubuntu.com/community/SSH/OpenSSH/Configuring).
 
 ## Setting up nginx
 
@@ -24,7 +22,7 @@ We use nginx to serve our files via the http protocol.
 $ sudo apt-get install nginx
 {% endhighlight %}
 
-After installing, we need to configure nginx. We create the
+After installing, we configure nginx. We create the
 config file `/etc/nginx/sites-available/example.com` with the following content:
 
 {% highlight bash %}
@@ -35,18 +33,23 @@ server {
 }
 {% endhighlight %}
 
-Next, we need to enable this site:
+Next, we enable the site:
 
 {% highlight bash %}
 $ cd /etc/nginx/sites-enabled/
 $ sudo ln -s ../sites-available/example.com .
 {% endhighlight %}
 
-Next, we need to create the folder which holds our served files and link to it:
+Now, we create the folder which holds our served files ...
 
 {% highlight bash %}
 $ cd ~
 $ mkdir hdd
+{% endhighlight %}
+
+... and link to this folder, so nginx uses it:
+
+{% highlight bash %}
 $ cd /usr/share/nginx/www/
 $ sudo ln -s /home/remoteuser/hdd/ example.com
 {% endhighlight %}
@@ -54,12 +57,12 @@ $ sudo ln -s /home/remoteuser/hdd/ example.com
 Finally, we start the webserver:
 
 {% highlight bash %}
-$ sudo service nginx restart
+$ sudo service nginx start
 {% endhighlight %}
 
 ## Setting up rsync
 
-Now that we have access to a running webserver, we can use rsync to push the files to the public:
+Now that we have access to a running webserver, we can use rsync to publish our files:
 
 {% highlight bash %}
 $ rsync -aiP --del -e ssh "$localfolder" remoteuser@server:hdd/
@@ -80,8 +83,8 @@ This command:
 
 ## Getting a Link List
 
-We uploaded the files. Next we need to send the link to the uploaded files to our friend.
-For that reason, I made an addition to the script, which outputs a list of links, one for each file on the server.
+We uploaded the files. Next we publish the links.
+For that reason, we make an addition to the script, which outputs a list of links, one for each file on the server.
 Hence, the only thing left to do for us is to copy the link and send it to our friend. Here you see the complete script:
 
 {% highlight bash %}
@@ -93,7 +96,7 @@ echo
 rsync -aiP --del -e ssh "$localfolder" remoteuser@server:hdd/
 {% endhighlight %}
 
-After saving it in a file called `~/bin/push-to-server` we need to make this file executable:
+After saving it in a file called `~/bin/push-to-server` we make it executable:
 
 {% highlight bash %}
 $ chmod u+x ~/bin/push-to-server
@@ -119,13 +122,13 @@ sending incremental file list
 
 ## Creating a Keyboard Shortcut for the Script
 
-Finally, we need to create the keyboard shortcut, to make the process of publishing as convenient as possible.
-In Ubuntu you can do this via `System Settings > Keyboard > Shortcuts > +`. Here, you can put in any title and the following command:
+Finally, we create the keyboard shortcut, to make the process of publishing as convenient as possible.
+In Ubuntu we can do this via `System Settings > Keyboard > Shortcuts > +`. Here, you can put in any title and the following command:
 
 {% highlight bash %}
 $ gnome-terminal -e "/bin/bash -c 'push-to-server;read'"
 {% endhighlight %}
 
-It ensures that we see the output of the script, so we are able to copy the needed links.
+It ensures that we see the output of the script, so we are able to copy the links we need.
 
 Happy publishing!
