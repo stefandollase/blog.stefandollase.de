@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Shortcut to push Local Folder to Webserver"
+title:  "Shortcut to publish Files from Local Folder"
 description: >
   Often enough I am annoyed when I want to send someone a file,
   so I decided to write a script which helps me to synchronize
