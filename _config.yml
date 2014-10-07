@@ -21,5 +21,6 @@ markdown: kramdown
 menu_entries:
   - url: "/projects/"
     title: "Projects"
+    useBaseUrl: false
   - url: "/about/"
     title: "About"
