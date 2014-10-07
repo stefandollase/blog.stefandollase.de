@@ -12,4 +12,7 @@ permalink: /projects/
    ([demo](http://stefandollase.github.io/app-state-binder-js/))
  * Jekyll Website Template 
    ([github](https://github.com/stefandollase/jekyll-template/))
+ * Blog
+   ([github](https://github.com/stefandollase/stefandollase.github.io/))
+   ([website](http://stefandollase.github.io/))
  
