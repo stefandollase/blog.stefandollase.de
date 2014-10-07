@@ -19,9 +19,7 @@ markdown: kramdown
 
 # Page Menu Entries
 menu_entries:
+  - url: "/projects/"
+    title: "Projects"
   - url: "/about/"
-    title: "About1"
-  - url: "/about/"
-    title: "About2"
-  - url: "/about/"
-    title: "About3"
+    title: "About"
