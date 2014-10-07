@@ -123,7 +123,7 @@ Finally, we need to create the keyboard shortcut, to make the process of publish
 In Ubuntu you can do this via `System Settings > Keyboard > Shortcuts > +`. Here, you can put in any title and the following command:
 
 {% highlight bash %}
-$ gnome-terminal -e "/bin/bash -c 'plh;read'"
+$ gnome-terminal -e "/bin/bash -c 'push-to-server;read'"
 {% endhighlight %}
 
 It ensures that we see the output of the script, so we are able to copy the needed links.
