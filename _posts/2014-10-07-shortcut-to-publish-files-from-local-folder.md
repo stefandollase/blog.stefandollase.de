@@ -5,7 +5,7 @@ description: >
   Often enough I am annoyed when I want to send someone a file,
   so I decided to write a script which helps me to synchronize
   a folder on my local laptop to a folder, which is publicly available on the internet.
-tags: [ guide, rsync, nginx, shell, ssh, linux ]
+tags: [ guide, linux, nginx, rsync, shell, ssh ]
 ---
 ## Setting up ssh
 
@@ -77,19 +77,19 @@ sending incremental file list
 
 This command:
 
- * recursively copies the content of the local folder to the server (`-a`)
- * displays a change-summary (`-iP`)
- * deletes files from the server which have been deleted from the local folder (`--del`)
+ * recursively copies the content of the local folder to the server `-a`
+ * displays a change-summary `-iP`
+ * deletes files from the server which have been deleted from the local folder `--del`
 
 ## Getting a Link List
 
 We uploaded the files. Next we publish the links.
 For that reason, we make an addition to the script, which outputs a list of links, one for each file on the server.
-Hence, the only thing left to do for us is to copy the link and send it to our friend. Here you see the complete script:
+Hence, the only thing left to do for us is to copy the link and paste it to a mail, chat window, etc. Here you see the complete script:
 
 {% highlight bash %}
 #!/bin/bash
-localfolder="/home/stefan/my-local-folder/"
+localfolder="/home/stefan/server-hdd/"
 cd "$localfolder"
 find . -type f -exec bash -c 'echo "http://example.com/hdd/${0:2}"' {} \;
 echo
@@ -120,10 +120,14 @@ sending incremental file list
      11,206,656 100%    2.00MB/s    0:00:05 (xfr#2, to-chk=2/5)
 {% endhighlight %}
 
-## Creating a Keyboard Shortcut for the Script
+## Creating the Keyboard Shortcut
 
 Finally, we create the keyboard shortcut, to make the process of publishing as convenient as possible.
-In Ubuntu we can do this via `System Settings > Keyboard > Shortcuts > +`. Here, you can put in any title and the following command:
+In Ubuntu we can do this via
+
+ * `System Settings > Keyboard > Shortcuts > +`
+
+Here, you can put in any title and the following command:
 
 {% highlight bash %}
 $ gnome-terminal -e "/bin/bash -c 'push-to-server;read'"
