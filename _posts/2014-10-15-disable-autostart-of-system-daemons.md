@@ -2,7 +2,7 @@
 layout: post
 title:  "Disable Autostart of System Daemons"
 description: How to prevent a system daemon from automatic start at boot-up.
-tags: [ guide, linux, upstart, shell ]
+tags: [ guide, linux, shell, upstart ]
 ---
 ## Quick and Simple
 

@@ -4,7 +4,7 @@ title:  "Shortcut to publish Screenshots"
 description: >
   This is an addition to the post "Shortcut to publish Files from Local Folder".
   I added another shortcut which helps me to quickly publish screenshots.
-tags: [ guide, linux, gnome-screenshot, shell, xclip ]
+tags: [ guide, linux, shell, gnome-screenshot, xclip ]
 ---
 ## Taking a Screenshot
 

@@ -5,7 +5,7 @@ description: >
   Often enough I am annoyed when I want to send someone a file,
   so I decided to write a script which helps me to synchronize
   a folder on my local laptop to a folder, which is publicly available on the internet.
-tags: [ guide, linux, nginx, rsync, shell, ssh ]
+tags: [ guide, linux, shell, nginx, rsync, ssh ]
 ---
 ## Setting up ssh
 
