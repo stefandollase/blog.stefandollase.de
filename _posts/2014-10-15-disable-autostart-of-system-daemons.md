@@ -9,7 +9,7 @@ However, on a laptop or desktop PC we do not need an ssh server that is always r
 Here is the command to disable the autostart of such daemons.
 
 {% highlight bash %}
-$ echo manual | sudo cat /etc/init/SERVICE.override
+$ echo manual | sudo tee /etc/init/SERVICE.override
 {% endhighlight %}
 
 ## Further Reading
