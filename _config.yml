@@ -1,7 +1,7 @@
 # Site settings
 title: "Stefan's Blog"
 description: "This is my blog. It is about technical stuff. I like to try out lots of different things, so the topic of the posts might vary."
-url: "http://stefandollase.github.io" # the base hostname & protocol for your site
+url: "http://blog.stefandollase.de" # the base hostname & protocol for your site
 baseurl: "" # the subpath of your site, e.g. /blog/
 
 # About the author
@@ -21,6 +21,5 @@ markdown: kramdown
 menu_entries:
   - url: "/projects/"
     title: "Projects"
-    useBaseUrl: false
   - url: "/about/"
     title: "About"
