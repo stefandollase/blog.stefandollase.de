@@ -13,6 +13,6 @@ permalink: /projects/
  * Jekyll Website Template 
    ([github](https://github.com/stefandollase/jekyll-template/))
  * Blog
-   ([github](https://github.com/stefandollase/stefandollase.github.io/) | 
-   [website](http://stefandollase.github.io/))
+   ([github](https://github.com/stefandollase/blog.stefandollase.de/) | 
+   [website](http://blog.stefandollase.de/))
  
