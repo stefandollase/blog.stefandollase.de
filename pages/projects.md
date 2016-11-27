@@ -4,6 +4,8 @@ title: Projects
 permalink: /projects/
 ---
 
+ * Amidst
+   ([github](https://github.com/toolbox4minecraft/amidst/))
  * Conway's Game of Life 
    ([github](https://github.com/stefandollase/game-of-life-js/) | 
    [demo](http://stefandollase.github.io/game-of-life-js/))
@@ -15,4 +17,4 @@ permalink: /projects/
  * Blog
    ([github](https://github.com/stefandollase/blog.stefandollase.de/) | 
    [website](http://blog.stefandollase.de/))
- 
+
